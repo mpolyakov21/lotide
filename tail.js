@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,14 +6,14 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const tail = function (arr) {
+const tail = function(arr) {
   if (arr.length <= 1) {
     return [];
   }
   return arr.slice(1);
-}
+};
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result.length, 2); // ensure we get back two elements
 assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs" 
+assertEqual(result[1], "Labs"); // ensure second element is "Labs"

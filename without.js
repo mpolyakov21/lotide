@@ -1,16 +1,16 @@
-const assertArraysEqual = function(actual, expected) {
-  const eqArrays = function(arr1, arr2) {
-    if (arr1.length !== arr2.length) {
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
       return false;
     }
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    return true;
-  };
+  }
+  return true;
+};
 
+const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -19,15 +19,20 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const without = function(source, itemsToRemove) {
-  let filteredArray = [];
-
-  for (let element of source) {
-    if (!itemsToRemove.includes(element)) {
-      filteredArray.push(element);
+  const result = [];
+  for (let i = 0; i < source.length; i++) {
+    let remove = false;
+    for (let j = 0; j < itemsToRemove.length; j++) {
+      if (source[i] === itemsToRemove[j]) {
+        remove = true;
+        break;
+      }
+    }
+    if (!remove) {
+      result.push(source[i]);
     }
   }
-
-  return filteredArray;
+  return result;
 };
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case

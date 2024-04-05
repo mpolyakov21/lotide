@@ -41,6 +41,6 @@ const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
 
 const data3 = [1, 66, 44, 5557, 2, -1, 2, -4666, 5];
-const expected3 = [1, 2, 5, 7, 2];
+const expected3 = [1, 66, 44, 5557, 2];
 const results3 = takeUntil(data3, x => x < 0);
-assertArraysEqual(results1, expected3);
+assertArraysEqual(results3, expected3);

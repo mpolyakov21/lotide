@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKeyByValue = function(object, callback) {
+const findKey = function(object, callback) {
   for (const key in object) {
     if (callback(object[key])) {
       return key;
@@ -16,7 +16,7 @@ const findKeyByValue = function(object, callback) {
 };
 
 assertEqual(
-  findKeyByValue({
+  findKey({
     "Blue Hill": { stars: 1 },
     Akaleri: { stars: 3 },
     noma: { stars: 2 },
@@ -28,7 +28,7 @@ assertEqual(
 );
 
 assertEqual(
-  findKeyByValue({
+  findKey({
     "Blue Hill": { stars: 1 },
     Akaleri: { stars: 3 },
     noma: { stars: 2 },

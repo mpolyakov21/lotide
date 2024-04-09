@@ -1,15 +1,15 @@
 {
-  "name": "lotide",
+  "name": "codemaksym/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "Library of functions",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": "codemaksym",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.1",

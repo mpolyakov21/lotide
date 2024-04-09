@@ -1,7 +1,7 @@
 {
-  "name": "codemaksym/lotide",
+  "name": "@codemaksym/lotide",
   "version": "1.0.0",
-  "description": "Library of functions",
+  "description": "functions",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "codemaksym",
+  "author": "maksym",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.1",

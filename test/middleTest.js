@@ -1,5 +1,4 @@
 const middle = require("../middle");
-const eqArrays = require("../eqArrays");
 const assert = require('chai').assert;
 // TEST CODE
 describe('middle', function() {
